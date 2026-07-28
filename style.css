@@ -210,3 +210,39 @@ body {
     font-size: 18px;
   }
 }
+
+.alamat {
+  padding: 80px 7%;
+  background-color: #f7f3ee;
+  color: #3d2a22;
+  text-align: center;
+}
+
+.alamat-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.alamat h2 {
+  margin-bottom: 18px;
+  font-size: 36px;
+}
+
+.alamat p {
+  margin-bottom: 28px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.alamat-button {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background-color: #a85f32;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.alamat-button:hover {
+  background-color: #814522;
+}
