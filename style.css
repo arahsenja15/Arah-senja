@@ -86,11 +86,12 @@ body {
 
   text-align: center;
 
-  background-image: url("gambar-background.jpg");
+  .hero {
+  background-image: url("./Background.jpeg");
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-}
+  }
 
 .hero-overlay {
   position: absolute;
