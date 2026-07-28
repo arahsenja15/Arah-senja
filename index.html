@@ -2,87 +2,188 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Arah Senja By Alika — temukan tenangmu.">
+  <meta name="theme-color" content="#2f1d16">
   <title>Arah Senja By Alika</title>
-
-  <!-- Menghubungkan index.html dengan style.css -->
-  <link rel="stylesheet" href="./style.css?v=20">
+  <link rel="stylesheet" href="./style.css?v=30">
 </head>
-
 <body>
+  <a class="skip-link" href="#konten">Lewati ke isi utama</a>
 
-  <header class="navbar">
-    <a href="#beranda" class="logo">
-      Arah Senja
-      <span>By Alika</span>
-    </a>
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#beranda" class="logo" aria-label="Arah Senja, kembali ke beranda">
+        <span class="logo-main">Arah Senja</span>
+        <span class="logo-sub">By Alika</span>
+      </a>
 
-    <button
-      class="menu-toggle"
-      id="menuToggle"
-      type="button"
-      aria-label="Buka menu"
-    >
-      ☰
-    </button>
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Buka menu navigasi"
+        aria-controls="navMenu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-    <nav class="nav-menu" id="navMenu">
-      <a href="#beranda">Beranda</a>
-      <a href="#menu">Menu</a>
-      <a href="#tentang">Tentang</a>
-      <a href="#galeri">Galeri</a>
-      <a href="#alamat">Alamat</a>
-      <a href="#kontak">Kontak</a>
-      
-    </nav>
+      <nav class="nav-menu" id="navMenu" aria-label="Navigasi utama">
+        <a href="#beranda">Beranda</a>
+        <a href="#menu">Menu</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#alamat">Alamat</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="hero" id="beranda">
-      <div class="hero-overlay"></div>
-
+  <main id="konten">
+    <section class="hero" id="beranda" aria-labelledby="hero-title">
+      <div class="hero-shade"></div>
       <div class="hero-content">
-        <h1>Arah Senja By Alika</h1>
-        <p>Temukan Tenangmu.</p>
-        <a href="#menu" class="hero-button">Lihat Menu</a>
+        <p class="eyebrow">Coffee • Stories • Calm</p>
+        <h1 id="hero-title">Arah Senja <span>By Alika</span></h1>
+        <p class="hero-tagline">Temukan Tenangmu.</p>
+        <p class="hero-description">
+          Sebuah ruang untuk menikmati kopi, berbagi cerita, dan menemukan ketenangan.
+        </p>
+        <div class="hero-actions">
+          <a href="#menu" class="button button-primary">Lihat Menu</a>
+          <a
+            href="https://share.google/fbxtORAG7AROeA0HI"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button button-secondary"
+          >Buka Google Maps</a>
+        </div>
+      </div>
+      <a class="scroll-hint" href="#tentang" aria-label="Lanjut ke bagian tentang">
+        <span></span>
+      </a>
+    </section>
+
+    <section class="section about" id="tentang" aria-labelledby="tentang-title">
+      <div class="container two-column">
+        <div>
+          <p class="section-kicker">Tentang Kami</p>
+          <h2 id="tentang-title">Ruang tenang di tengah perjalanan.</h2>
+        </div>
+        <div class="about-copy">
+          <p>
+            Arah Senja By Alika hadir sebagai tempat untuk berhenti sejenak, menikmati suasana hangat,
+            dan berbagi waktu bersama orang-orang terdekat.
+          </p>
+          <p>
+            Datang, duduk dengan nyaman, lalu biarkan setiap momen berjalan lebih pelan.
+          </p>
+        </div>
       </div>
     </section>
-    <section id="alamat">
-  <h2>Alamat Arah Senja</h2>
 
-  <p>
-    Klik tombol di bawah ini untuk melihat lokasi Arah Senja.
-  </p>
+    <section class="section menu-section" id="menu" aria-labelledby="menu-title">
+      <div class="container">
+        <div class="section-heading centered">
+          <p class="section-kicker">Pilihan Kami</p>
+          <h2 id="menu-title">Menu Arah Senja</h2>
+          <p>Daftar menu dan harga lengkap sedang disiapkan.</p>
+        </div>
 
-  <a
-    href="https://share.google/fbxtORAG7AROeA0HI"
-    target="_blank"
-  >
-    Buka Google Maps
-  </a>
+        <div class="menu-grid">
+          <article class="menu-card">
+            <div class="menu-icon" aria-hidden="true">☕</div>
+            <h3>Minuman</h3>
+            <p>Pilihan minuman untuk menemani waktu santai.</p>
+          </article>
+          <article class="menu-card">
+            <div class="menu-icon" aria-hidden="true">🍰</div>
+            <h3>Pendamping</h3>
+            <p>Sajian pendamping untuk melengkapi suasana.</p>
+          </article>
+          <article class="menu-card">
+            <div class="menu-icon" aria-hidden="true">🌙</div>
+            <h3>Suasana Senja</h3>
+            <p>Ruang hangat untuk berbincang dan menenangkan diri.</p>
+          </article>
+        </div>
+
+        <div class="info-note">
+          Menu lengkap dapat ditambahkan kapan saja setelah foto atau daftar harga tersedia.
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="galeri" aria-labelledby="galeri-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Galeri</p>
+          <h2 id="galeri-title">Sudut-sudut Arah Senja</h2>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="gallery-item gallery-wide">
+            <img src="./background.jpeg" alt="Suasana utama Arah Senja By Alika" loading="lazy">
+          </figure>
+          <figure class="gallery-item gallery-crop gallery-crop-left" aria-label="Sudut interior Arah Senja"></figure>
+          <figure class="gallery-item gallery-crop gallery-crop-right" aria-label="Area duduk Arah Senja"></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section location-section" id="alamat" aria-labelledby="alamat-title">
+      <div class="container location-card">
+        <div class="location-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" role="img">
+            <path d="M12 21s7-6.2 7-12A7 7 0 1 0 5 9c0 5.8 7 12 7 12Zm0-9a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"/>
+          </svg>
+        </div>
+        <div class="location-copy">
+          <p class="section-kicker">Alamat</p>
+          <h2 id="alamat-title">Temukan Arah Senja</h2>
+          <p>Klik tombol berikut untuk membuka titik lokasi dan petunjuk arah melalui Google Maps.</p>
+        </div>
+        <a
+          href="https://share.google/fbxtORAG7AROeA0HI"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button-primary location-button"
+        >
+          <span aria-hidden="true">📍</span> Buka Google Maps
+        </a>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="kontak" aria-labelledby="kontak-title">
+      <div class="container contact-card">
+        <p class="section-kicker">Kontak</p>
+        <h2 id="kontak-title">Sampai bertemu di Arah Senja.</h2>
+        <p>
+          Informasi WhatsApp, Instagram, dan jam operasional dapat ditambahkan setelah datanya tersedia.
+        </p>
+        <a
+          href="https://share.google/fbxtORAG7AROeA0HI"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-link"
+        >Lihat lokasi sekarang <span aria-hidden="true">→</span></a>
+      </div>
     </section>
   </main>
-  
 
-  <script>
-    const menuToggle = document.getElementById("menuToggle");
-    const navMenu = document.getElementById("navMenu");
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <strong>Arah Senja By Alika</strong>
+        <p>Temukan Tenangmu.</p>
+      </div>
+      <p>© <span id="year"></span> Arah Senja By Alika.</p>
+    </div>
+  </footer>
 
-    menuToggle.addEventListener("click", function () {
-      navMenu.classList.toggle("active");
-    });
-
-    document.querySelectorAll(".nav-menu a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        navMenu.classList.remove("active");
-      });
-    });
-  </script>
-
+  <script src="./script.js"></script>
 </body>
 </html>
