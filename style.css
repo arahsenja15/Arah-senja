@@ -19,6 +19,7 @@ body {
   width: 100%;
   min-height: 90px;
   padding: 18px 7%;
+
   background-color: #3d2a22;
 
   display: flex;
@@ -42,9 +43,9 @@ body {
 .logo span {
   display: block;
   margin-top: 5px;
+  color: #d6b69b;
   font-size: 16px;
   font-weight: 400;
-  color: #d6b69b;
 }
 
 .nav-menu {
@@ -58,11 +59,10 @@ body {
   text-decoration: none;
   font-size: 18px;
   white-space: nowrap;
-  transition: 0.3s ease;
 }
 
 .nav-menu a:hover {
-  color: #c88855;
+  color: #d6b69b;
 }
 
 .menu-toggle {
@@ -77,56 +77,73 @@ body {
 /* HERO */
 .hero {
   min-height: calc(100vh - 90px);
-  padding: 80px 7%;
+  padding: 60px 7%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   text-align: center;
 
+  background-color: #5b392b;
 
+  background-image:
+    linear-gradient(
+      rgba(25, 15, 10, 0.48),
+      rgba(25, 15, 10, 0.48)
+    ),
+    url("./background.jpeg");
 
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
+.hero-overlay {
+  display: none;
+}
 
 .hero-content {
-  position: relative;
-  z-index: 2;
   width: 100%;
   max-width: 800px;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-content h1 {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+  color: #ffffff;
   font-size: clamp(38px, 6vw, 68px);
   line-height: 1.15;
 }
 
 .hero-content p {
-  margin-bottom: 35px;
-  font-size: clamp(20px, 3vw, 30px);
+  margin-bottom: 32px;
+  color: #ffffff;
+  font-size: clamp(20px, 3vw, 28px);
 }
 
 .hero-button {
   display: inline-block;
-  padding: 16px 38px;
+  padding: 15px 36px;
 
   border-radius: 999px;
-  background-color: #a06438;
+  background-color: #a85f32;
 
   color: #ffffff;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 19px;
+
   transition: 0.3s ease;
 }
 
 .hero-button:hover {
-  background-color: #7f4b29;
+  background-color: #814522;
   transform: translateY(-3px);
 }
 
-/* TABLET DAN HP */
+/* RESPONSIVE HP */
 @media (max-width: 768px) {
   .navbar {
     min-height: 75px;
@@ -168,7 +185,10 @@ body {
   .nav-menu a {
     width: 100%;
     padding: 15px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-bottom: 1px solid
+      rgba(255, 255, 255, 0.12);
+
     font-size: 17px;
   }
 
@@ -178,7 +198,7 @@ body {
   }
 
   .hero-content h1 {
-    font-size: 40px;
+    font-size: 38px;
   }
 
   .hero-content p {
@@ -188,81 +208,5 @@ body {
   .hero-button {
     padding: 14px 32px;
     font-size: 18px;
-  }
-}
-.hero {
-  min-height: calc(100vh - 90px);
-  padding: 60px 22px;
-
-  position: relative;
-  isolation: isolate;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-
-  /* Warna cadangan jika gambar gagal dimuat */
-  background-color: #5b392b;
-
-  /* Harus sama persis dengan nama file GitHub */
-  background-image: url("./Background.jpeg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-/* Lapisan gelap di atas gambar */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-color: rgba(25, 15, 10, 0.48);
-}
-
-.hero-overlay {
-  display: none;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: 800px;
-}
-
-.hero-content h1 {
-  margin-bottom: 18px;
-  color: white;
-  font-size: clamp(38px, 6vw, 68px);
-  line-height: 1.15;
-}
-
-.hero-content p {
-  margin-bottom: 32px;
-  color: white;
-  font-size: clamp(20px, 3vw, 28px);
-}
-
-.hero-button {
-  display: inline-block;
-  padding: 15px 36px;
-  border-radius: 999px;
-  background-color: #a85f32;
-
-  color: white;
-  text-decoration: none;
-  font-size: 19px;
-}
-
-@media (max-width: 768px) {
-  .hero {
-    min-height: calc(100vh - 75px);
-  }
-
-  .hero-content h1 {
-    font-size: 38px;
   }
 }
