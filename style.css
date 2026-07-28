@@ -199,3 +199,26 @@ body {
     font-size: 18px;
   }
 }
+.hero {
+  min-height: calc(100vh - 75px);
+  padding: 60px 22px;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      rgba(35, 25, 20, 0.45),
+      rgba(35, 25, 20, 0.45)
+    ),
+    url("./Background.jpeg") center center / cover no-repeat;
+}
+
+/* Overlay sudah dibuat langsung lewat background */
+.hero-overlay {
+  display: none;
+}
