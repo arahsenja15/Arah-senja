@@ -1,87 +1,45 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arah Senja By Alika</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<header class="navbar">
+  <a href="#" class="logo">
+    Arah Senja
+    <span>By Alika</span>
+  </a>
 
-<header>
-    <nav>
-        <h2>Arah Senja By Alika</h2>
-        <ul>
-            <li><a href="#beranda">Beranda</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#tentang">Tentang</a></li>
-            <li><a href="#galeri">Galeri</a></li>
-            <li><a href="#lokasi">Lokasi</a></li>
-            <li><a href="#kontak">Kontak</a></li>
-        </ul>
-    </nav>
+  <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">
+    ☰
+  </button>
+
+  <nav class="nav-menu" id="navMenu">
+    <a href="#beranda">Beranda</a>
+    <a href="#menu">Menu</a>
+    <a href="#tentang">Tentang</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
 </header>
 
-<section id="beranda" class="hero">
-    <h1>Arah Senja By Alika</h1>
-    <p>Temukan Tenangmu.</p>
-    <a href="#menu" class="btn">Lihat Menu</a>
-</section>
+<main>
+  <section class="hero" id="beranda">
+    <div class="hero-overlay"></div>
 
-<section id="menu">
-    <h2>Menu Favorit</h2>
-    <div class="card">
-        <h3>Espresso</h3>
-        <p>Kopi dengan cita rasa autentik.</p>
+    <div class="hero-content">
+      <h1>Arah Senja By Alika</h1>
+      <p>Temukan Tenangmu.</p>
+      <a href="#menu" class="hero-button">Lihat Menu</a>
     </div>
-    <div class="card">
-        <h3>Cappuccino</h3>
-        <p>Lembut, hangat, dan menenangkan.</p>
-    </div>
-    <div class="card">
-        <h3>Snack</h3>
-        <p>Teman terbaik menikmati kopi.</p>
-    </div>
-</section>
+  </section>
+</main>
 
-<section id="tentang">
-    <h2>Tentang Kami</h2>
-    <p>
-        Arah Senja By Alika hadir sebagai tempat untuk menikmati kopi,
-        berbincang, bekerja, dan menemukan ketenangan di setiap momen.
-    </p>
-</section>
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu");
 
-<section id="galeri">
-    <h2>Galeri</h2>
-    <p>Foto-foto kafe akan tampil di sini.</p>
-</section>
+  menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
 
-<section id="lokasi">
-    <h2>Lokasi</h2>
-    <p>Google Maps akan dipasang di bagian ini.</p>
-</section>
-
-<section id="kontak">
-    <h2>Kontak</h2>
-    <p>WhatsApp | Instagram | TikTok</p>
-</section>
-    <!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arah Senja</title>
-    <link rel="stylesheet" href="gaya.css">
-</head>
-<body>
-
-</body>
-</html>
-
-<footer>
-    <p>© 2026 Arah Senja By Alika</p>
-</footer>
-
-</body>
-</html>
+  document.querySelectorAll(".nav-menu a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+    });
+  });
+</script>
