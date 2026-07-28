@@ -1,8 +1,11 @@
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#f8f4ef;
-    color:#333;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('background.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+    min-height: 100vh;
 }
 
 header{
