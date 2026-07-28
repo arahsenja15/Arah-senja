@@ -86,18 +86,9 @@ body {
 
   text-align: center;
 
-  .hero {
-  background-image: url("./Background.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  }
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(38, 32, 28, 0.55);
-}
+
+
 
 .hero-content {
   position: relative;
@@ -200,30 +191,78 @@ body {
   }
 }
 .hero {
-  min-height: calc(100vh - 75px);
+  min-height: calc(100vh - 90px);
   padding: 60px 22px;
 
   position: relative;
+  isolation: isolate;
+
   display: flex;
   justify-content: center;
   align-items: center;
 
   text-align: center;
-  background-color: #8a817c;
 
-  background-image:
-    linear-gradient(
-      rgba(35, 25, 20, 0.45),
-      rgba(35, 25, 20, 0.45)
-    ),
-    url("https://arahsenja15.github.io/Arah-senja/background.jpg?v=2");
+  /* Warna cadangan jika gambar gagal dimuat */
+  background-color: #5b392b;
 
+  /* Harus sama persis dengan nama file GitHub */
+  background-image: url("./Background.jpeg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+/* Lapisan gelap di atas gambar */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: rgba(25, 15, 10, 0.48);
+}
+
 .hero-overlay {
   display: none;
 }
-  
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  margin-bottom: 18px;
+  color: white;
+  font-size: clamp(38px, 6vw, 68px);
+  line-height: 1.15;
+}
+
+.hero-content p {
+  margin-bottom: 32px;
+  color: white;
+  font-size: clamp(20px, 3vw, 28px);
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 15px 36px;
+  border-radius: 999px;
+  background-color: #a85f32;
+
+  color: white;
+  text-decoration: none;
+  font-size: 19px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: calc(100vh - 75px);
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+}
